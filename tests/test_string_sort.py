@@ -2,7 +2,7 @@ from subprocess import run, PIPE
 import os
 import pytest
 
-B_FILE_PATH = './bin/string_sort.c'
+B_FILE_PATH = './bin/string_sort'
 
 def test_bin_folder_contains_string_sort():
     assert os.path.isfile(B_FILE_PATH)
