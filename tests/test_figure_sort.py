@@ -27,6 +27,11 @@ def test_figure_sort_not_correct_input_4():
     assert result.returncode != 0
     assert "Puck you, Verter!" in result.stderr
 
+def test_figure_sort_not_correct_input_5():
+    result = run([B_FILE_PATH], input='-1', encoding='utf-8', stderr=PIPE, stdout=PIPE)
+    assert result.returncode != 0
+    assert "Puck you, Verter!" in result.stderr
+
 def test_figure_sort_correct_input_1():
     result = run([B_FILE_PATH], input='3 1 2 3 2 1 2 3 4 7', encoding='utf-8', stdout=PIPE)
     assert result.returncode == 0
