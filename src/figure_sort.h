@@ -2,8 +2,8 @@
 #define FIGURE_SORT_H
 
 typedef struct rect_t {
-    unsigned int id;
-    unsigned int area;
+    int id;
+    int area;
 } Rect;
 
 void input(Rect** rectangles, int* size);
