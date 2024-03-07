@@ -17,12 +17,12 @@ jobs:
         
     - name: Compile string_sort
       run: |
-        gcc -Wall -Werror -Wextra -std=c11 -o ./bin/string_sort ./src/string_sort.c
+        gcc -Wall -Werror -Wextra -std=c11 -o ./bin/string_sort ./src/string_sort.c ./src/misc.c
     
     - name: Compile figure_sort if exists
       if: ${{ hashFiles('./src/figure_sort.c') != '' }}
       run: |
-        gcc -Wall -Werror -Wextra -std=c11 -o ./bin/figure_sort ./src/figure_sort.c
+        gcc -Wall -Werror -Wextra -std=c11 -o ./bin/figure_sort ./src/figure_sort.c ./src/misc.c
 
     - name: Install dependencies
       run: |
